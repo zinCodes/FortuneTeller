@@ -99,7 +99,7 @@ public class fortuneTellingApp {
 //		}
 //	}
 	System.out.println("How many siblings do you have?");
-	String strUserSiblings = input.next();
+	String strUserSiblings = "";
 	int numUserSiblings = 0;
 //	if (strUserSiblings.equalsIgnoreCase("quit")) {
 //		System.out.println("Nobody likes a quitter...");
@@ -107,24 +107,31 @@ public class fortuneTellingApp {
 //	}
 	boolean hasSiblings = false;
 	while (hasSiblings == false)
-	{
+	{ 
+	  strUserSiblings = input.nextLine();
 		try {
 			
 			numUserSiblings = Integer.parseInt(strUserSiblings);
 			hasSiblings = true;
 		}
 	catch (NumberFormatException ex) {
-		if (strUserSiblings.equalsIgnoreCase("quit")) {
-			System.out.println("Nobody likes a quitter...");
-			System.exit(0);
-		}
-		else  {
-		System.out.println("Please check and type in again.");
-			break;
-			
-		}
+	//		System.out.println("Please check and type in again.");
+			if (strUserSiblings.equalsIgnoreCase("quit")) {
+				System.out.println("Nobody likes a quitter...");
+				System.exit(0);
+			}
+				System.out.println("Please check and type in again.");
+			continue;
+		} 		
 	}
-	}	
+//		else  {
+//		System.out.println("Please check and type in again.");
+//		input.next();
+//			}
+		
+	
+	
+		
 	int retirementAge = 0;
 	if (userAge % 2 == 0) {
 		retirementAge = 68;
@@ -175,7 +182,10 @@ public class fortuneTellingApp {
 		userBalance = "$0.00";
 	
 	}
-	System.out.println(firstName.toUpperCase() + " " + lastName.toUpperCase() + " will retire in " + retirementAge + " years with " + userBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by " + transportMode + ".");
+	System.out.println(firstName.toUpperCase().substring(0,1) + firstName.substring(1) + " " 
+			+ lastName.toUpperCase().substring(0,1) + lastName.substring(1) + 
+			" will retire in " + retirementAge + " years with " + userBalance +
+			" in the bank, a vacation home in " + vacationHome + ", and travel by " + transportMode + ".");
 
   
 	}

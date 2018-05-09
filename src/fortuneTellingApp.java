@@ -63,8 +63,6 @@ public class fortuneTellingApp {
 				userBirthMonth = input.nextInt();
 				hasBirthMonth = true;
 				break;
-				// System.out.println("Thank you for providing your birth month");
-				// }
 			} catch (RuntimeException e1) {
 				String strBirthMonth = input.nextLine();
 				if (strBirthMonth.equalsIgnoreCase("quit")) {
@@ -92,11 +90,9 @@ public class fortuneTellingApp {
 			favColor = input.nextLine();
 			try {
 				int favcol = Integer.parseInt(favColor);
-				// hasFavColor = true;
 				System.out.println("This does not make sense. Please enter a ROYGBIV color or enter \"Help\".");
 				continue;
 			} catch (Exception e2) {
-				// hasFavColor = true;
 				if (favColor.toLowerCase().equals("help")) {
 					System.out.println("The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.");
 					continue;
@@ -122,7 +118,6 @@ public class fortuneTellingApp {
 				numUserSiblings = Integer.parseInt(strUserSiblings);
 				hasSiblings = true;
 			} catch (NumberFormatException ex) {
-				// System.out.println("Please check and type in again.");
 				if (strUserSiblings.equalsIgnoreCase("quit")) {
 					System.out.println("Nobody likes a quitter...");
 					System.exit(0);
@@ -180,8 +175,10 @@ public class fortuneTellingApp {
 			userBalance = "$673,974.41";
 		} else {
 			userBalance = "$0.00";
-
 		}
+		
+		/* The results are displayed as follows:*/
+		
 		System.out.println(firstName.toUpperCase().substring(0, 1) + firstName.substring(1) + " "
 				+ lastName.toUpperCase().substring(0, 1) + lastName.substring(1) + " will retire in " + retirementAge
 				+ " years with " + userBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by "

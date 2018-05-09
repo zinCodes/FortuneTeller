@@ -2,7 +2,7 @@
 /*This Fortune Teller program will prompt the user for their first name, last name, age, birth month, 
  * favorite ROYGBIV color, and number of siblings. Then the user is provided with a statement of their
  *  fortune consisting of their retirement age, bank balance, the location of their vacation home, and 
- *  mode of transportation.  If at any point, the user would like to quit the program, then can do so 
+ *  mode of transportation.  If at any point, the user would like to quit the program, they can do so 
  *  by typing in "quit".
  */
 import java.util.Scanner;
